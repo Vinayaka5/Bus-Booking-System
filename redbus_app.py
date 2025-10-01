@@ -96,7 +96,7 @@ if not filtered_df.empty:
     selected_bus = st.selectbox("Select a bus for details", filtered_df["bus_id"].tolist())
     bus_info = filtered_df[filtered_df["bus_id"] == selected_bus].iloc[0]
     st.markdown(f"""
-    ### 🚌 Bus ID: {bus_info['bus_id']}
+    ### Bus ID: {bus_info['bus_id']}
     - **Operator:** {bus_info['operator']}
     - **Departure:** {bus_info['departure']}
     - **Arrival:** {bus_info['arrival']}
@@ -104,3 +104,4 @@ if not filtered_df.empty:
     - **Price:** ₹{bus_info['price']}
     - **Seats Available:** {bus_info['seats']}
     """)
+
